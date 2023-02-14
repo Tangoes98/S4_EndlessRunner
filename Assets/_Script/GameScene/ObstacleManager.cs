@@ -6,6 +6,15 @@ public class ObstacleManager : MonoBehaviour
 {
     [SerializeField] float _speed;
 
+    [System.Serializable]
+    struct Data
+    {
+        public string name;
+        public Vector3 position;
+
+    }
+
+
     void Update()
     {
         obsMovement();
@@ -18,10 +27,17 @@ public class ObstacleManager : MonoBehaviour
         // if collide with player, pause the game and show the score page.
         if (gameObject.tag == "OC_spike")
         {
-            if (collision.gameObject.CompareTag("Player"))
+            if (collision.gameObject.CompareTag("Player")) // when hitting player & game over
             {
                 SceneController.InGameMenu();
                 Time.timeScale = 0;
+
+                var data = new Data();
+                data.name = collision.gameObject.name;
+                data.position = collision.transform.position;
+
+                TelemetryLogger.Log(this, "kill", data); // Telemetry log
+
             }
         }
 

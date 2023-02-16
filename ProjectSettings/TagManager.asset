@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CheckPoint
+  - Ground
+  - DeathCheck
+  - OC_bounceFloor
+  - OC_wall
+  - OC_spike
+  - FinalCheckPt
   layers:
   - Default
   - TransparentFX

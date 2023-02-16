@@ -49,6 +49,10 @@ public class PlayerController : MonoBehaviour
                 //Using stamina
                 Stamina.Instance.UsingStamina(Stamina.Instance._staminaUse);
 
+                //play jump sound
+                AudioMg.Instance.playSoundEffect(0);
+
+
 
             }
             else
@@ -69,6 +73,25 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("OC_wall"))
         {
             isGround = true;
+        }
+        if (collision.gameObject.CompareTag("FinalCheckPt"))
+        {
+            Debug.Log("To next scene");
+        }
+
+        // play sound effect in each situation.
+        switch (collision.gameObject.tag)
+        {
+            case "OC_bounceFloor":
+                AudioMg.Instance.playSoundEffect(1);
+                break;
+            case "OC_spike":
+                AudioMg.Instance.playSoundEffect(2);
+                break;
+            case "OC_wall":
+                AudioMg.Instance.playSoundEffect(3);
+                break;
+
         }
     }
 }

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/S4_GameScene_TestLevel.unity
     guid: 77a75de2c98eec647a5779db546e3a11
+  - enabled: 1
+    path: Assets/Scenes/TestScene_summer.unity
+    guid: 3b8854098d04c5048b88292f9451330b
   m_configObjects: {}

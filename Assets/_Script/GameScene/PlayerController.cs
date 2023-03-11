@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -77,6 +78,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("FinalCheckPt"))
         {
             Debug.Log("To next scene");
+            var scene = SceneManager.GetActiveScene().buildIndex;
+            // When finishing the 'winter' scene, jumps back to 'spring'
+            if (scene == 4)
+            {
+                scene = 0;
+            }
+            SceneManager.LoadScene(scene + 1);
         }
 
         // play sound effect in each situation.

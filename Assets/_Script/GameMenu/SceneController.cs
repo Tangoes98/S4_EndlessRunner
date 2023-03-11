@@ -28,12 +28,18 @@ public class SceneController : MonoBehaviour
     public void gameButton()
     {
         // when button pressed goto gamescene1
-        SceneManager.LoadScene(1);
-        Time.timeScale = 0;
 
-        if (s == 1)
+        if (s != 0)
         {
+            SceneManager.LoadScene(s);
+            Time.timeScale = 1;
             turnOffMenu();
+        }
+        else
+        {
+            SceneManager.LoadScene(1);
+            Time.timeScale = 0;
+
         }
 
     }

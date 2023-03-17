@@ -1571,8 +1571,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slider: {fileID: 404920135}
   _maxStamina: 0
-  _staminaRegen: 10
-  _staminaUse: 10
+  _staminaRegen: 8
+  _staminaUse: 15
 --- !u!4 &405122205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7849680596237036997, guid: 3e15cf7b654aca049afcb07866597a4a, type: 3}
@@ -5358,7 +5358,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &1766504226
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5375,7 +5375,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1766504227
 SpriteRenderer:
   m_ObjectHideFlags: 0

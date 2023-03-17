@@ -18,10 +18,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     bool AnimIsJump;
 
+    public static bool isHittedInSummer;
+    public float _SummerSpikeHitForce;
+
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        isHittedInSummer = false;
     }
 
     void Start()
@@ -34,6 +39,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Jump();
+
+        if (isHittedInSummer)
+        {
+            SummerSpikeHitMovement();
+            isHittedInSummer = false;
+        }
+
     }
 
     private void Jump()
@@ -53,8 +65,6 @@ public class PlayerController : MonoBehaviour
                 //play jump sound
                 AudioMg.Instance.playSoundEffect(0);
 
-
-
             }
             else
             {
@@ -63,6 +73,12 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+    }
+
+    // When hit by spikes in summer, player will not die, instead, apply a force to player rigidbody.
+    void SummerSpikeHitMovement()
+    {
+        rb.AddForce(Vector2.left * _SummerSpikeHitForce + Vector2.up * _SummerSpikeHitForce, ForceMode2D.Impulse);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

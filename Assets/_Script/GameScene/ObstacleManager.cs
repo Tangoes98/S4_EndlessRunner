@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class ObstacleManager : MonoBehaviour
 {
@@ -28,7 +30,12 @@ public class ObstacleManager : MonoBehaviour
         // if collide with player, pause the game and show the score page.
         if (gameObject.tag == "OC_spike")
         {
-            if (collision.gameObject.CompareTag("Player")) // when hitting player & game over
+            if (SceneManager.GetActiveScene().buildIndex == 2
+                && collision.gameObject.CompareTag("Player")) // when scene is at summer
+            {
+                PlayerController.isHittedInSummer = true;
+            }
+            else if (collision.gameObject.CompareTag("Player"))  // when hitting player & game over
             {
                 SceneController.InGameMenu();
                 Time.timeScale = 0;

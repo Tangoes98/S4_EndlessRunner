@@ -11,6 +11,7 @@ public class ObstacleManager : MonoBehaviour
     {
         public string name;
         public Vector3 position;
+        public float currentStamina;
 
     }
 
@@ -35,6 +36,7 @@ public class ObstacleManager : MonoBehaviour
                 var data = new Data();
                 data.name = collision.gameObject.name;
                 data.position = collision.transform.position;
+                data.currentStamina = Stamina.Instance.CurrentStamina();
 
                 TelemetryLogger.Log(this, "kill", data); // Telemetry log
 

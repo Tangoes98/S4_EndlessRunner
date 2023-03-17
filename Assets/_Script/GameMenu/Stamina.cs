@@ -31,7 +31,7 @@ public class Stamina : MonoBehaviour
     {
         if (_slider.value < _maxStamina)
         {
-            _slider.value += _staminaRegen *  Time.deltaTime;
+            _slider.value += _staminaRegen * Time.deltaTime;
         }
     }
 
@@ -39,4 +39,11 @@ public class Stamina : MonoBehaviour
     {
         _slider.value -= value;
     }
+
+    public float CurrentStamina()
+    {
+        var currentStamina = _slider.value;
+        return currentStamina;
+    }
+
 }

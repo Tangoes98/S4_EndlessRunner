@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     public static bool isHittedInSummer;
     public float _SummerSpikeHitForce;
 
+    public float _bounceForce;
+
+
 
 
     void Awake()
@@ -96,11 +99,15 @@ public class PlayerController : MonoBehaviour
             Debug.Log("To next scene");
             var scene = SceneManager.GetActiveScene().buildIndex;
             // When finishing the 'winter' scene, jumps back to 'spring'
-            if (scene == 4)
+            if (scene == 5)
             {
                 scene = 0;
             }
             SceneManager.LoadScene(scene + 1);
+        }
+        if(collision.gameObject.CompareTag("OC_bounceFloor"))
+        {
+            rb.AddForce(Vector2.up * _bounceForce, ForceMode2D.Impulse);
         }
 
         // play sound effect in each situation.

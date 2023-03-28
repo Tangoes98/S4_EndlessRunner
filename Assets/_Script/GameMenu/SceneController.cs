@@ -11,7 +11,7 @@ public class SceneController : MonoBehaviour
     private void Awake()
     {
         s = SceneManager.GetActiveScene().buildIndex;
-        if (s == 1)
+        if (s == 1 || s == 2)
         {
             turnOffMenu();
             Time.timeScale = 0;

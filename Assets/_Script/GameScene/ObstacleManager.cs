@@ -30,7 +30,7 @@ public class ObstacleManager : MonoBehaviour
         // if collide with player, pause the game and show the score page.
         if (gameObject.tag == "OC_spike")
         {
-            if (SceneManager.GetActiveScene().buildIndex == 2
+            if (SceneManager.GetActiveScene().buildIndex == 3
                 && collision.gameObject.CompareTag("Player")) // when scene is at summer
             {
                 PlayerController.isHittedInSummer = true;

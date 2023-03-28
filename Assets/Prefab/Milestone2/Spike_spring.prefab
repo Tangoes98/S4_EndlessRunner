@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7849680596237036994}
   - component: {fileID: 7849680596237036995}
   - component: {fileID: -8905014994042032824}
+  - component: {fileID: 1345377176050973601}
   m_Layer: 0
   m_Name: Spike_spring
   m_TagString: OC_spike
@@ -63,7 +64,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7849680596237036992}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -95,6 +96,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+--- !u!60 &1345377176050973601
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849680596237036992}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.077631906, y: 0.9948245}
+      - {x: -0.37140495, y: 0.8420893}
+      - {x: -0.08076596, y: 0.68466127}
+      - {x: -0.3458237, y: 0.5169377}
+      - {x: -0.07246675, y: 0.38580164}
+      - {x: -0.3539641, y: 0.22451422}
+      - {x: -0.08681877, y: 0.13542536}
+      - {x: -0.13888885, y: 0.010131534}
+      - {x: 0.14787123, y: 0.008705854}
+      - {x: 0.13333368, y: 0.97665155}
+      - {x: 0.11780729, y: 0.9973534}
 --- !u!1 &8590887926413177995
 GameObject:
   m_ObjectHideFlags: 0

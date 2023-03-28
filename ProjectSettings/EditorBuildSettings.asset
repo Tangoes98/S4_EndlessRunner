@@ -9,15 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/PlaytestScenes/GameMenu.unity
     guid: 5b06a768a876cc94dacade6d97dd322f
   - enabled: 1
+    path: Assets/Scenes/PlaytestScenes/0_GameScene_Tutorial.unity
+    guid: 20989b0901e37f24795e628f81790428
+  - enabled: 1
     path: Assets/Scenes/PlaytestScenes/1_GameScene_Spring.unity
     guid: f9bf763d020b28549af2a6163ee3e0f5
   - enabled: 1
     path: Assets/Scenes/PlaytestScenes/2_GameScene_Summer.unity
     guid: f705d0ce7d90cc742903ddf554839448
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlaytestScenes/3_GameScene_Fall.unity
     guid: 9deacc02e220b1349a77faba09649db1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlaytestScenes/4_GameScene_Winter.unity
     guid: 32672753800dc044a8c0d87cc2488fc7
   m_configObjects: {}

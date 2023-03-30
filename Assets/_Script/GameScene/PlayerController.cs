@@ -41,12 +41,15 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(rb.velocity.x);
         Jump();
 
         if (isHittedInSummer)
         {
             SummerSpikeHitMovement();
-            isHittedInSummer = false;
+            //if(isGround) rb.AddForce(Vector2.right * _SummerSpikeHitForce, ForceMode2D.Impulse);
+            //if(isGround) rb.velocity = new Vector2(0, rb.velocity.y);
+            //isHittedInSummer = false;
         }
 
     }
@@ -57,7 +60,8 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && Stamina.Instance._slider.value >= Stamina.Instance._staminaUse)
             {
-                rb.AddForce(new Vector2(0, jumpForce));
+                //rb.AddForce(new Vector2(0, jumpForce));
+                rb.AddForce(Vector2.up* jumpForce);
                 isGround = false;
                 AnimIsJump = true;
                 playerAnim.SetBool("isJump", true);
@@ -82,6 +86,8 @@ public class PlayerController : MonoBehaviour
     void SummerSpikeHitMovement()
     {
         rb.AddForce(Vector2.left * _SummerSpikeHitForce + Vector2.up * _SummerSpikeHitForce, ForceMode2D.Impulse);
+        isGround = false;
+        isHittedInSummer = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -89,10 +95,12 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGround = true;
+            
         }
         if (collision.gameObject.CompareTag("OC_wall"))
         {
             isGround = true;
+            rb.velocity = new Vector2(0, rb.velocity.y);
         }
         if (collision.gameObject.CompareTag("FinalCheckPt"))
         {
@@ -108,6 +116,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("OC_bounceFloor"))
         {
             rb.AddForce(Vector2.up * _bounceForce, ForceMode2D.Impulse);
+            isGround = false;
         }
 
         // play sound effect in each situation.

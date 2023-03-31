@@ -6552,7 +6552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Settings>k__BackingField: {fileID: 11400000, guid: 6be0f04dd3d20b545a230a755892a0a4, type: 2}
-  _section: S4_GameScene_TestLevel
+  _section: GameScene_Summer
   OnConnectionSuccess:
     m_PersistentCalls:
       m_Calls: []
@@ -8969,7 +8969,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 123.67, y: -0.000011489}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 45.3156, y: 16.522}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893494336
@@ -9001,8 +9001,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283563905
-  m_fontColor: {r: 0.5064852, g: 1, b: 0.3160377, a: 1}
+    rgba: 4294901883
+  m_fontColor: {r: 0.48390722, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

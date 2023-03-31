@@ -21,12 +21,12 @@ public class ScoreManager : MonoBehaviour
         // text score
         if (EndingCheckPoint._disToPercent <= 100)
         {
-            scoreText.text = "Score: " + EndingCheckPoint._disToPercent.ToString() + "% / 100%";
+            scoreText.text = "Process: " + EndingCheckPoint._disToPercent.ToString() + "% / 100%";
 
         }
         else
         {
-            scoreText.text = "Score: " + "Please enter next level";
+            scoreText.text = "Process: " + "Please enter next level";
         }
 
     }

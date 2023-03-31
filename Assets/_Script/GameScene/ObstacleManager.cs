@@ -9,19 +9,15 @@ public class ObstacleManager : MonoBehaviour
     [SerializeField] float _speed;
 
     [System.Serializable]
-    struct Data
+    struct KillingStaminaData
     {
-        public string name;
-        public Vector3 position;
-        public float currentStamina;
-
+        public int currentStamina;
     }
 
 
     void Update()
     {
         obsMovement();
-        //Debug.Log(gameObject.tag);
 
     }
 
@@ -35,12 +31,13 @@ public class ObstacleManager : MonoBehaviour
                 SceneController.InGameMenu();
                 Time.timeScale = 0;
 
-                var data = new Data();
-                data.name = collision.gameObject.name;
-                data.position = collision.transform.position;
-                data.currentStamina = Stamina.Instance.CurrentStamina();
+                var data = new KillingStaminaData();
+                data.currentStamina = Mathf.RoundToInt(Stamina.Instance.CurrentStamina());
+                var scene = SceneManager.GetActiveScene().buildIndex;
 
-                TelemetryLogger.Log(this, "kill", data); // Telemetry log
+                TelemetryLogger.Log(this, "KillingScene", scene); // Telemetry log killing scene
+                TelemetryLogger.Log(this, "KillingStaminaData", data); // Telemetry log killing remaining Stamina
+                TelemetryLogger.Log(this, "KillingScoreData", EndingCheckPoint._disToPercent.ToString() + "%"); // Telemetry log killing percentage of the game.
 
             }
         }

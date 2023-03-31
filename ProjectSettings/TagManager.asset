@@ -11,6 +11,7 @@ TagManager:
   - OC_wall
   - OC_spike
   - FinalCheckPt
+  - OC_SummerSpike
   layers:
   - Default
   - TransparentFX

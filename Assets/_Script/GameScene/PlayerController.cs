@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && Stamina.Instance._slider.value >= Stamina.Instance._staminaUse)
             {
                 //rb.AddForce(new Vector2(0, jumpForce));
-                rb.AddForce(Vector2.up* jumpForce);
+                rb.AddForce(Vector2.up * jumpForce);
                 isGround = false;
                 AnimIsJump = true;
                 playerAnim.SetBool("isJump", true);
@@ -91,26 +91,34 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGround = true;
-            
         }
+
         if (collision.gameObject.CompareTag("OC_wall"))
         {
             isGround = true;
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
+
         if (collision.gameObject.CompareTag("FinalCheckPt"))
         {
-            Debug.Log("To next scene");
-            var scene = SceneManager.GetActiveScene().buildIndex;
+            GameManager._levelFinished = true;
+
+            TelemetryLogger.Log(this, "SpringLevelFinishTime", GameManager.Instance.playtime);
+            TelemetryLogger.Log(this, "SpringLevelDeathCount", GameManager.Instance.deathCount);
             
+            //Debug.Log("To next scene");
+
+            var scene = SceneManager.GetActiveScene().buildIndex;
+
             // When finishing the 'winter' scene, jumps back to 'spring'
             if (scene == 5)
             {
                 scene = 0;
             }
             SceneManager.LoadScene(scene + 1);
+
         }
-        if(collision.gameObject.CompareTag("OC_bounceFloor"))
+        if (collision.gameObject.CompareTag("OC_bounceFloor"))
         {
             rb.AddForce(Vector2.up * _bounceForce, ForceMode2D.Impulse);
             isGround = false;
@@ -126,7 +134,7 @@ public class PlayerController : MonoBehaviour
                 AudioMg.Instance.playSoundEffect(2);
                 break;
             case "OC_wall":
-                AudioMg.Instance.playSoundEffect(3);
+                //AudioMg.Instance.playSoundEffect(3);
                 break;
 
         }

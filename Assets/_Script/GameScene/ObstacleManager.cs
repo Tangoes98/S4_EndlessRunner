@@ -34,10 +34,11 @@ public class ObstacleManager : MonoBehaviour
                 var data = new KillingStaminaData();
                 data.currentStamina = Mathf.RoundToInt(Stamina.Instance.CurrentStamina());
                 var scene = SceneManager.GetActiveScene().buildIndex;
+                var deathGamePercentage = EndingCheckPoint._disToPercent.ToString() + "%";
 
                 TelemetryLogger.Log(this, "KillingScene", scene); // Telemetry log killing scene
                 TelemetryLogger.Log(this, "KillingStaminaData", data); // Telemetry log killing remaining Stamina
-                TelemetryLogger.Log(this, "KillingScoreData", EndingCheckPoint._disToPercent.ToString() + "%"); // Telemetry log killing percentage of the game.
+                TelemetryLogger.Log(this, "KillingScoreData", deathGamePercentage); // Telemetry log killing percentage of the game.
 
             }
         }

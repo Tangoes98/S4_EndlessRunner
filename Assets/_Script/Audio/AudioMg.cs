@@ -44,6 +44,11 @@ public class AudioMg : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        AudioMg.Instance.playMusic(0, true);
+    }
+
     public void playMusic(int index, bool isloop)
     {
         _musicSource.volume = _volume;

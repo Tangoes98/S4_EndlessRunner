@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlaytestScenes/2_GameScene_Summer.unity
     guid: f705d0ce7d90cc742903ddf554839448
+  - enabled: 1
+    path: Assets/Scenes/PlaytestScenes/FinalScene.unity
+    guid: 8233cd05e0f409e4492448eead18a587
   - enabled: 0
     path: Assets/Scenes/PlaytestScenes/3_GameScene_Fall.unity
     guid: 9deacc02e220b1349a77faba09649db1

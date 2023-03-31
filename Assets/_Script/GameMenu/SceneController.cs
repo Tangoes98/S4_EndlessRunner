@@ -33,12 +33,14 @@ public class SceneController : MonoBehaviour
             SceneManager.LoadScene(s);
             Time.timeScale = 1;
             turnOffMenu();
+
+            // record player death time on each scene
+            GameManager.Instance.deathCount ++;
         }
         else
         {
             SceneManager.LoadScene(1);
             Time.timeScale = 0;
-
         }
 
     }

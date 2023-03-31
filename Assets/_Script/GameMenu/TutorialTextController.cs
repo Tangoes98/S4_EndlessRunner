@@ -23,7 +23,6 @@ public class TutorialTextController : MonoBehaviour
     }
     IEnumerator ShowTutorialText()
     {
-        Debug.Log("start coroutine");
         int textSlide = 0;
         while (textSlide < textObjects.Count)
         {

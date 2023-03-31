@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Stamina : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Stamina : MonoBehaviour
     public int _maxStamina;
     public int _staminaRegen;
     public int _staminaUse;
+    public GameObject staminaText;
 
     private void Awake()
     {
@@ -33,6 +35,10 @@ public class Stamina : MonoBehaviour
         {
             _slider.value += _staminaRegen * Time.deltaTime;
         }
+
+        // Show remaining stamina.
+        var _staminText = staminaText.GetComponent<TextMeshProUGUI>();
+        _staminText.text = Mathf.RoundToInt(CurrentStamina()).ToString();
     }
 
     public void UsingStamina(int value)

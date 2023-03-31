@@ -22,7 +22,6 @@ public class SceneController : MonoBehaviour
     {
         Time.timeScale = 1;
         //GameObject.Find("Instructions").SetActive(false);
-
     }
 
     public void gameButton()

@@ -12477,6 +12477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathCount: 0
+  playtime: 0
 --- !u!4 &2129336337
 Transform:
   m_ObjectHideFlags: 0
@@ -12559,7 +12560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 996994820062464055, guid: dda34e4ab20e6424a8b208f4f5e518d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8
+      value: -0.67
       objectReference: {fileID: 0}
     - target: {fileID: 996994820062464055, guid: dda34e4ab20e6424a8b208f4f5e518d2, type: 3}
       propertyPath: m_LocalPosition.z

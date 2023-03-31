@@ -103,9 +103,8 @@ public class PlayerController : MonoBehaviour
         {
             GameManager._levelFinished = true;
 
-            TelemetryLogger.Log(this, "SpringLevelFinishTime", GameManager.Instance.playtime);
-            TelemetryLogger.Log(this, "SpringLevelDeathCount", GameManager.Instance.deathCount);
-            
+
+
             //Debug.Log("To next scene");
 
             var scene = SceneManager.GetActiveScene().buildIndex;
@@ -116,6 +115,18 @@ public class PlayerController : MonoBehaviour
                 scene = 0;
             }
             SceneManager.LoadScene(scene + 1);
+
+            switch (scene)
+            {
+                case 2:
+                    TelemetryLogger.Log(this, "SpringLevelFinishTime", GameManager.Instance.playtime);
+                    TelemetryLogger.Log(this, "SpringLevelDeathCount", GameManager.Instance.deathCount);
+                    break;
+                case 3:
+                    TelemetryLogger.Log(this, "SummerLevelFinishTime", GameManager.Instance.playtime);
+                    TelemetryLogger.Log(this, "SummerLevelDeathCount", GameManager.Instance.deathCount);
+                    break;
+            }
 
         }
         if (collision.gameObject.CompareTag("OC_bounceFloor"))

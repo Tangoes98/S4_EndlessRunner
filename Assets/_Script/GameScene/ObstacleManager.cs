@@ -29,13 +29,8 @@ public class ObstacleManager : MonoBehaviour
     {
         // if collide with player, pause the game and show the score page.
         if (gameObject.tag == "OC_spike")
-        {
-            if (SceneManager.GetActiveScene().buildIndex == 3
-                && collision.gameObject.CompareTag("Player")) // when scene is at summer
-            {
-                PlayerController.isHittedInSummer = true;
-            }
-            else if (collision.gameObject.CompareTag("Player"))  // when hitting player & game over
+        {   
+            if (collision.gameObject.CompareTag("Player"))  // when hitting player & game over
             {
                 SceneController.InGameMenu();
                 Time.timeScale = 0;
@@ -48,6 +43,11 @@ public class ObstacleManager : MonoBehaviour
                 TelemetryLogger.Log(this, "kill", data); // Telemetry log
 
             }
+        }
+
+        if (gameObject.tag == "OC_SummerSpike")
+        {
+            PlayerController.isHittedInSummer = true;
         }
 
         if (collision.gameObject.CompareTag("CheckPoint"))

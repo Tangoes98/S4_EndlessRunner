@@ -41,15 +41,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(rb.velocity.x);
         Jump();
 
         if (isHittedInSummer)
         {
             SummerSpikeHitMovement();
-            //if(isGround) rb.AddForce(Vector2.right * _SummerSpikeHitForce, ForceMode2D.Impulse);
-            //if(isGround) rb.velocity = new Vector2(0, rb.velocity.y);
-            //isHittedInSummer = false;
         }
 
     }
@@ -106,6 +102,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("To next scene");
             var scene = SceneManager.GetActiveScene().buildIndex;
+            
             // When finishing the 'winter' scene, jumps back to 'spring'
             if (scene == 5)
             {

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 876186481277755026}
   m_Layer: 0
   m_Name: Spike_summer
-  m_TagString: OC_spike
+  m_TagString: OC_SummerSpike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

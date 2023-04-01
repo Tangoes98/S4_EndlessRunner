@@ -1964,6 +1964,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1152201678}
     m_Modifications:
+    - target: {fileID: 1345377176050973601, guid: a628b14435c47f741bf8068a5ce0ec3a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7849680596237036992, guid: a628b14435c47f741bf8068a5ce0ec3a, type: 3}
       propertyPath: m_Name
       value: Spike_spring
@@ -4013,6 +4017,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1152201678}
     m_Modifications:
+    - target: {fileID: 876186481277755026, guid: ef2369f6e0b804941a08a398c7274bc1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7849680596237036992, guid: ef2369f6e0b804941a08a398c7274bc1, type: 3}
       propertyPath: m_Name
       value: Spike_summer

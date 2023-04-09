@@ -3361,17 +3361,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jumpfloor_winter
       objectReference: {fileID: 0}
+    - target: {fileID: 7849680596237036995, guid: c4c94a670121f064c83414e5b191db3b, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7849680596237036997, guid: c4c94a670121f064c83414e5b191db3b, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7849680596237036997, guid: c4c94a670121f064c83414e5b191db3b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.22
+      value: 2.51
       objectReference: {fileID: 0}
     - target: {fileID: 7849680596237036997, guid: c4c94a670121f064c83414e5b191db3b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.71
+      value: -2.41
       objectReference: {fileID: 0}
     - target: {fileID: 7849680596237036997, guid: c4c94a670121f064c83414e5b191db3b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7538,7 +7542,7 @@ MonoBehaviour:
   playerAnim: {fileID: 1766504226}
   AnimIsJump: 0
   _SummerSpikeHitForce: 0
-  _bounceForce: 0
+  _bounceForce: 15
 --- !u!4 &2082634796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7849680596237036997, guid: 2e6cd99c548dabc459ee9f960e705d25, type: 3}

@@ -2656,11 +2656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7849680596237036997, guid: 62de806a18490ac44887dc714d2e0be3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.35
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 7849680596237036997, guid: 62de806a18490ac44887dc714d2e0be3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.66
+      value: -2.44
       objectReference: {fileID: 0}
     - target: {fileID: 7849680596237036997, guid: 62de806a18490ac44887dc714d2e0be3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7418,7 +7418,7 @@ MonoBehaviour:
   playerAnim: {fileID: 1766504226}
   AnimIsJump: 0
   _SummerSpikeHitForce: 0
-  _bounceForce: 0
+  _bounceForce: 15
 --- !u!224 &2095288083 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6430203551074112864, guid: 5099245beb8e83c4fb1026f5b1a2f546, type: 3}

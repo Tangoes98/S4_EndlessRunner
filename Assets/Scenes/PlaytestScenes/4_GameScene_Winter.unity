@@ -5919,7 +5919,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &1766504226
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5936,8 +5936,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1766504227
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7110,9 +7109,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 2030345580}
     m_Modifications:
     - target: {fileID: 996994819942621045, guid: dda34e4ab20e6424a8b208f4f5e518d2, type: 3}
-      propertyPath: p_player
-      value: 
-      objectReference: {fileID: 1053233961}
+      propertyPath: m_speed
+      value: 6.5
+      objectReference: {fileID: 0}
     - target: {fileID: 996994820062464054, guid: dda34e4ab20e6424a8b208f4f5e518d2, type: 3}
       propertyPath: m_Name
       value: ToNextSeasonCheckPt
@@ -7160,22 +7159,6 @@ PrefabInstance:
     - target: {fileID: 996994820062464055, guid: dda34e4ab20e6424a8b208f4f5e518d2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996994820062464058, guid: dda34e4ab20e6424a8b208f4f5e518d2, type: 3}
-      propertyPath: m_Color.b
-      value: 0.9400096
-      objectReference: {fileID: 0}
-    - target: {fileID: 996994820062464058, guid: dda34e4ab20e6424a8b208f4f5e518d2, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 996994820062464058, guid: dda34e4ab20e6424a8b208f4f5e518d2, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 996994820062464058, guid: dda34e4ab20e6424a8b208f4f5e518d2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dda34e4ab20e6424a8b208f4f5e518d2, type: 3}

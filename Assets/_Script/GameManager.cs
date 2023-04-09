@@ -46,6 +46,10 @@ public class GameManager : MonoBehaviour
             case 3:
                 LogResetPlaytimeDeathcount();
                 break;
+            case 4:
+                break;
+            case 5:
+                break;
         }
     }
 

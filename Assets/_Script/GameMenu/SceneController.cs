@@ -28,14 +28,14 @@ public class SceneController : MonoBehaviour
     {
         // when button pressed goto gamescene1
 
-        if (s != 0)
+        if (s != 0 )
         {
             SceneManager.LoadScene(s);
             Time.timeScale = 1;
             turnOffMenu();
 
             // record player death time on each scene
-            GameManager.Instance.deathCount ++;
+            GameManager.Instance.deathCount++;
         }
         else
         {

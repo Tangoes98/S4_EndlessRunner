@@ -110,10 +110,10 @@ public class PlayerController : MonoBehaviour
             var scene = SceneManager.GetActiveScene().buildIndex;
 
             // When finishing the 'winter' scene, jumps back to 'spring'
-            if (scene == 5)
-            {
-                scene = 0;
-            }
+            // if (scene == 5)
+            // {
+            //     scene = 0;
+            // }
             SceneManager.LoadScene(scene + 1);
 
             switch (scene)
